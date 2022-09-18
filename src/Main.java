@@ -9,8 +9,8 @@ public class Main {
     public static final String ADD_CONTACT    = "AC";
     public static final String REMOVE_CONTACT = "RC";
     public static final String GET_PHONE      = "GP";
-
-    public static final String GET_NAME      = "GN";
+    public static final String EQUAL_PHONES   = "EP";
+    public static final String GET_NAME       = "GN";
     public static final String GET_EMAIL      = "GE";
     public static final String SET_PHONE      = "SP";
     public static final String SET_EMAIL      = "SE";
@@ -58,6 +58,9 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
+                case EQUAL_PHONES:
+                    equalPhones(cBook);
+                    break;
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -93,6 +96,10 @@ public class Main {
             System.out.println(contact.getName());
         else
             System.out.println("Phone number does not exist.");
+    }
+
+    private static void equalPhones(ContactBook cBook){
+
     }
 
     private static void addContact(Scanner in, ContactBook cBook) {
