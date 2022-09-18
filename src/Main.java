@@ -99,6 +99,29 @@ public class Main {
     }
 
     private static void equalPhones(ContactBook cBook){
+        cBook.initializeIterator();
+        int maxContacts = cBook.getNumberOfContacts();
+        int phoneNumbers[] = new int[maxContacts];
+        int counter = 0;
+        int timesPresent = 0;
+        while (cBook.hasNext()){
+            phoneNumbers[counter++] = cBook.next().getPhone();
+        }
+        for (int k = 0; k < maxContacts; k++){
+            timesPresent = 0;
+            for (int j = 0; j < maxContacts; j++){
+                if (phoneNumbers[k] == phoneNumbers[j]){
+                    timesPresent++;
+                }
+            }
+            if (timesPresent > 1){
+                System.out.println("There are contacts that share phone numbers.");
+                break;
+            }
+        }
+        if (timesPresent <= 1){
+            System.out.println("All contacts have different phone numbers.");
+        }
 
     }
 
