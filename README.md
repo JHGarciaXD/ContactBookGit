@@ -5,3 +5,4 @@ Fork this project to make your own version of it.
 
 Students:
 João Garcia 60106
+Pedro Lopes 57514
